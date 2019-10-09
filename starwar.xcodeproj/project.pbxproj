@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE077DBA234DC5EE00674982 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE077DB9234DC5EE00674982 /* Router.swift */; };
+		AE077DBC234DCDBF00674982 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE077DBB234DCDBF00674982 /* APIManager.swift */; };
+		AE077DC0234DDD8300674982 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE077DBF234DDD8300674982 /* People.swift */; };
+		AE077DC2234DDDA300674982 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE077DC1234DDDA300674982 /* Person.swift */; };
 		AE240467234CDE5D00884A9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE240466234CDE5D00884A9D /* AppDelegate.swift */; };
 		AE240469234CDE5D00884A9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE240468234CDE5D00884A9D /* SceneDelegate.swift */; };
 		AE240470234CDE5E00884A9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE24046F234CDE5E00884A9D /* Assets.xcassets */; };
@@ -17,6 +21,10 @@
 
 /* Begin PBXFileReference section */
 		2C70C44D18106FB98E997B49 /* Pods_starwar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_starwar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE077DB9234DC5EE00674982 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		AE077DBB234DCDBF00674982 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		AE077DBF234DDD8300674982 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		AE077DC1234DDDA300674982 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		AE240463234CDE5D00884A9D /* starwar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = starwar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE240466234CDE5D00884A9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE240468234CDE5D00884A9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +54,6 @@
 				D652AF826F10D676EEF38189 /* Pods-starwar.debug.xcconfig */,
 				DF71074B58A748CDDD1CAF01 /* Pods-starwar.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -88,6 +95,8 @@
 		AE24047A234CDE7D00884A9D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AE077DBF234DDD8300674982 /* People.swift */,
+				AE077DC1234DDDA300674982 /* Person.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -117,6 +126,8 @@
 		AE24047E234CDEAE00884A9D /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				AE077DB9234DC5EE00674982 /* Router.swift */,
+				AE077DBB234DCDBF00674982 /* APIManager.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -243,9 +254,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE077DBA234DC5EE00674982 /* Router.swift in Sources */,
 				AE7913C9234CE135008FDA3D /* ViewController.swift in Sources */,
+				AE077DBC234DCDBF00674982 /* APIManager.swift in Sources */,
 				AE240467234CDE5D00884A9D /* AppDelegate.swift in Sources */,
+				AE077DC2234DDDA300674982 /* Person.swift in Sources */,
 				AE240469234CDE5D00884A9D /* SceneDelegate.swift in Sources */,
+				AE077DC0234DDD8300674982 /* People.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

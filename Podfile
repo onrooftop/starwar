@@ -9,5 +9,6 @@ target 'starwar' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'Alamofire'
+  pod 'Gloss'
 
 end
