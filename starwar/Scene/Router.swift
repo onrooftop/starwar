@@ -13,6 +13,7 @@ enum Router: URLRequestConvertible {
     
     case people(parameters: Parameters)
     case person(id: Int)
+    case homeworld(id :Int)
     case film(id: Int)
     case specie(id: Int)
     case vehicle(id: Int)
@@ -25,6 +26,8 @@ enum Router: URLRequestConvertible {
         case .people:
             return .get
         case .person:
+            return .get
+        case .homeworld:
             return .get
         case .film:
             return .get
@@ -43,6 +46,8 @@ enum Router: URLRequestConvertible {
             return "/people"
         case .person(let id):
             return "/people/\(id)"
+        case .homeworld(let id):
+            return "/planets/\(id)"
         case .film(let id):
             return "/films/\(id)"
         case .specie(let id):
