@@ -9,9 +9,9 @@
 import Foundation
 
 extension String {
-    func getId() -> String {
+    func getId(by offset: Int = -2) -> String {
         //https://swapi.co/api/planets/1/ -> return 1
-        let idChar = self[self.index(self.endIndex, offsetBy: -2)]
+        let idChar = self[self.index(self.endIndex, offsetBy: offset)]
         
         return "\(idChar)"
     }

@@ -10,5 +10,7 @@ target 'starwar' do
   pod 'RxCocoa'
   pod 'Alamofire'
   pod 'Gloss'
+  pod 'NSObject+Rx'
+  pod 'Action'
 
 end

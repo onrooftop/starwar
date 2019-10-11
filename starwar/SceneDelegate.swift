@@ -22,7 +22,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         window?.makeKeyAndVisible()
-        window?.rootViewController = ViewController()
+        window?.rootViewController = UIViewController() //Default ViewController
+        
+        let sceneCoordinator = SceneCoordinator(window: window!)
+        let storage = StarwarStorage()
+        let listViewModel = StarwarListViewModel(title: "Star Wars", sceneCoordinator: sceneCoordinator, storage: storage)
+        let listScene = Scene.list(listViewModel)
+        sceneCoordinator.transition(to: listScene, using: .root)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

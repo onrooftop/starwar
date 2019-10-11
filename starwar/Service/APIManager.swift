@@ -12,6 +12,7 @@ import RxSwift
 import Gloss
 
 protocol NetworkSession {
+    @discardableResult
     func request(router: Router) -> Single<JSON>
 }
 
@@ -21,6 +22,7 @@ class APIManager: NetworkSession {
     
     private init() {}
 
+    @discardableResult
     func request(router: Router) -> Single<JSON> {
         
         return Single.create { (single) -> Disposable in
