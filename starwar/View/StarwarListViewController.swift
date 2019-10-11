@@ -46,7 +46,6 @@ class StarwarListViewController: UIViewController, BindableType{
             .bind(to: activityIndicatorView.rx.isAnimating)
             .disposed(by: rx.disposeBag)
         
-        
             
         tableView.rx.willDisplayCell
             .flatMap({ (cell, indexPath) -> Observable<Bool> in
@@ -80,12 +79,14 @@ extension StarwarListViewController {
         
         //MARK: ActivityIndicator
         let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 44))
-        view.backgroundColor = UIColor.init(white: 1, alpha: 1)
+        view.backgroundColor = .white
         tableView.tableFooterView = view
         tableView.tableFooterView?.isHidden = true
         view.addSubview(activityIndicatorView)
         activityIndicatorView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         activityIndicatorView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        
+        
     }
     
     class func _tableView() -> UITableView {
@@ -99,6 +100,13 @@ extension StarwarListViewController {
         ai.translatesAutoresizingMaskIntoConstraints = false
         ai.color = .darkGray
         return ai
+    }
+    
+    class func _bloackView() -> UIView {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .clear
+        return view
     }
     
 }

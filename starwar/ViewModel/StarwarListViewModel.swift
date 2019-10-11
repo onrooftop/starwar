@@ -37,8 +37,10 @@ class StarwarListViewModel: CommonViewModel {
         super.init(title: title, sceneCoordinator: sceneCoordinator, storage: storage)
         
         
-        jsonResponse = endDrag.withLatestFrom(people)
-            .flatMapLatest { return apiManager.request(router: .people(parameters: ["page": $0.next ?? "0"])).catchErrorJustReturn([:]) }
+        jsonResponse = endDrag
+            .withLatestFrom(people)
+            .map { $0.next ?? "-1" }
+            .flatMap { return apiManager.request(router: .people(parameters: ["page": $0])).catchErrorJustReturn([:]) }
  
         jsonResponse
             .subscribeOn(MainScheduler.instance)
@@ -55,9 +57,10 @@ class StarwarListViewModel: CommonViewModel {
             .disposed(by: disposeBag)
         
         isLoading = Observable.merge(
-            endDrag.map { _ in true },
-            jsonResponse.map { _ in false}
-        ).startWith(true)
+                endDrag.map { _ in true },
+                jsonResponse.map { _ in false}
+            )
+            .startWith(true)
         
 
         
